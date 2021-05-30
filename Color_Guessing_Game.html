@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <head>
+    <title>Color Guessing Game</title>
+  </head>
+  <body>
+    <h1>Color Guessing Game</h1>
+    <button onclick="runGame()">Start Game</button>
+    <script>
+      const COLORS_ARRAY = [
+        'blue',
+        'cyan',
+        'gold',
+        'gray',
+        'green',
+        'magenta',
+        'orange',
+        'red',
+        'white',
+        'yellow',
+      ]
+      function runGame() {
+        let guess = ''
+        let correct = 'false'
+        const target = ['targetIndex']
+        const targetIndex = [COLORS_ARRAY]
+        return Math.floor(Math.random() * (COLORS_ARRAY.length - 1)) + 0
+        let numTries = 0
+        console.log(COLORS_ARRAY.length)
+        do {
+          numTries + 1
+          alert('Congratulations it took you 4 tries!')
+          let guess = prompt(
+            'I am thinking of one of these colors:\n\n' +
+              COLORS_ARRAY +
+              'What color am I thinking of?\n',
+          )
+
+          alert('guess')
+          if (guess === null) {
+            alert('Sorry, Try Again')
+            return value
+            let correct = checkGuess.call(guess, target)
+          }
+        } while (!correct)
+        alert('Congratulations! You got it.')
+      }
+
+      function checkGuess(guess, target) {
+        let correct = guess
+        if (guess) {
+          alert('That color is not in the range!')
+          return false
+        } else if (guess > target) {
+          alert('That color is not in the range')
+        } else if (guess < target) {
+          alert('That color is not in the range')
+        } else {
+          alert(
+            'Your did it! It took you ' +
+              guesses +
+              ' guesses to take it right!',
+          )
+          return true
+        }
+        return correct
+        document.body.style.background = guess
+      }
+    </script>
+  </body>
+</html>
